@@ -51,9 +51,15 @@ numbers.forEach((digit)=>{
 const compute = document.querySelector('.compute');
 const clear = document.querySelector('.clear');
 
+
+function resetColors(){
+    operators.forEach(operator => operator.style.backgroundColor = 'unset')
+}
+
 clear.addEventListener('click', ()=>{
     display.textContent = '0';
     operation = null;
+    resetColors();
     inputMode = false;
     number1 = null;
     number2 = null;
@@ -63,6 +69,7 @@ compute.addEventListener('click',(e)=>{
 
     if (number1 != null) display.textContent = operate(operation, number1, number2);
     operation = null;
+    resetColors()
     inputMode = false;
     number1 = null;
 
@@ -79,8 +86,9 @@ operators.forEach((operator)=> {
             number1 = +display.textContent
         }
 
-        
+        resetColors()
         operation = operator.textContent;
+        operator.style.backgroundColor = 'grey'
         inputMode = false;
     });
 });
