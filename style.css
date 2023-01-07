@@ -15,7 +15,8 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    background-color: #85d075;
+    background-color: #87e273;
+    border: 1px grey solid;
     grid-area: output;
     overflow-x: hidden;
 }
@@ -51,7 +52,14 @@ body {
     border: 2px black solid;
     
 }
-
-button.selected {
-    background-color: grey;
+button {
+    border: 1px grey solid;
 }
+
+button:active, button.selected {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+     outline: none;
+  }
