@@ -2,4 +2,4 @@
 
 Calculator created with HTML, CSS and JS.
 
-[Live Demo](https://michalosman.github.io/calculator/) :point_left:
+[Live Demo](https://dependability.github.io/calculator/) :point_left:
